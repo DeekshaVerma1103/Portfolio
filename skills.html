@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Skills - Deeksha Verma</title>
+<link rel="stylesheet" href="css/style.css"/>
+<style>
+.page-hero{padding:6rem 0 4rem;text-align:center;}
+.page-hero h1{font-family:var(--font-display);font-size:clamp(2.2rem,4vw,3.2rem);font-weight:700;letter-spacing:-0.03em;margin-bottom:1rem;}
+.page-hero p{color:var(--muted);font-size:1rem;max-width:500px;margin:0 auto;}
+.skills-section{padding:2rem 0 6rem;}
+.skills-category{margin-bottom:4rem;}
+.cat-header{display:flex;align-items:center;gap:1rem;margin-bottom:2rem;}
+.cat-icon{font-size:1.5rem;}
+.cat-title{font-family:var(--font-display);font-size:1.3rem;font-weight:700;}
+.cat-line{flex:1;height:1px;background:var(--border);}
+.skill-list{display:flex;flex-wrap:wrap;gap:0.75rem;}
+.skill-item{font-family:var(--font-mono);font-size:0.8rem;color:var(--text2);padding:0.7rem 1rem;background:var(--card-bg);border:1px solid var(--border);border-radius:var(--radius);transition:border-color var(--transition),color var(--transition),transform var(--transition);}
+.skill-item:hover{border-color:var(--cyan);color:var(--cyan);transform:translateY(-2px);}
+.tools-section{padding:4rem 0;background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.tools-grid{display:flex;flex-wrap:wrap;gap:0.75rem;justify-content:center;}
+.tool-chip{display:flex;align-items:center;gap:0.5rem;font-family:var(--font-mono);font-size:0.78rem;color:var(--muted);padding:0.5rem 1rem;border:1px solid var(--border);border-radius:999px;background:var(--card-bg);transition:border-color var(--transition),color var(--transition),transform var(--transition),box-shadow var(--transition);cursor:default;}
+.tool-chip:hover{border-color:var(--cyan);color:var(--cyan);transform:translateY(-3px);box-shadow:0 6px 20px var(--cyan-dim);}
+.learning-section{padding:4rem 0;}
+.learning-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;}
+.learn-card{padding:1.5rem;background:var(--card-bg);border:1px solid var(--border);border-radius:var(--radius2);transition:border-color var(--transition),transform var(--transition);}
+.learn-card:hover{border-color:var(--lav);transform:translateY(-3px);}
+.learn-icon{font-size:1.75rem;margin-bottom:0.75rem;}
+.learn-card h4{font-family:var(--font-display);font-size:0.95rem;font-weight:600;margin-bottom:0.4rem;}
+.learn-card p{font-size:0.82rem;color:var(--muted);line-height:1.6;}
+.progress-ring{display:inline-flex;align-items:center;gap:0.4rem;font-family:var(--font-mono);font-size:0.68rem;color:var(--lav);margin-top:0.5rem;}
+@media(max-width:680px){.skill-list{gap:0.6rem;}.skill-item{font-size:0.74rem;padding:0.6rem 0.8rem;}}
+</style>
+</head>
+<body>
+<div class="page-transition"></div>
+<canvas id="particles-canvas"></canvas>
+<div class="grid-overlay"></div>
+<div class="orb orb-1"></div><div class="orb orb-2"></div>
+<nav>
+  <a href="index.html" class="nav-logo">Deeksha <span>Verma</span></a>
+  <ul class="nav-center">
+    <li><a href="index.html">home</a></li><li><a href="about.html">about</a></li>
+    <li><a href="skills.html">skills</a></li><li><a href="work.html">work</a></li><li><a href="contact.html">contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <span class="theme-icon">🌙</span>
+    <button class="theme-toggle" aria-label="Toggle theme"><div class="toggle-thumb"></div></button>
+    <a href="contact.html" class="nav-hire magnetic">contact me</a>
+  </div>
+  <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu">
+  <a href="index.html">home</a><a href="about.html">about</a>
+  <a href="skills.html">skills</a><a href="work.html">work</a><a href="contact.html">contact</a>
+</div>
+
+<div class="page-content">
+  <div class="page-hero reveal">
+    <div class="container">
+      <span class="sec-eyebrow">capabilities</span>
+      <h1>Skills &amp; <span style="color:var(--lav)">Technologies</span></h1>
+      <p>A practical skill set across programming, web technologies, machine learning fundamentals, and developer tools.</p>
+    </div>
+  </div>
+
+  <section class="skills-section">
+    <div class="container">
+
+      <div class="skills-category reveal">
+        <div class="cat-header"><span class="cat-icon">01</span><h3 class="cat-title">Programming Languages</h3><div class="cat-line"></div></div>
+        <div class="skill-list">
+          <span class="skill-item">Python</span>
+          <span class="skill-item">C</span>
+          <span class="skill-item">C++</span>
+          <span class="skill-item">Java</span>
+          <span class="skill-item">JavaScript</span>
+          <span class="skill-item">PHP</span>
+        </div>
+      </div>
+
+      <div class="skills-category reveal">
+        <div class="cat-header"><span class="cat-icon">02</span><h3 class="cat-title">Web Technologies</h3><div class="cat-line"></div></div>
+        <div class="skill-list">
+          <span class="skill-item">HTML5</span>
+          <span class="skill-item">CSS3</span>
+          <span class="skill-item">JavaScript</span>
+          <span class="skill-item">React</span>
+          <span class="skill-item">PHP</span>
+          <span class="skill-item">Responsive Design</span>
+        </div>
+      </div>
+
+      <div class="skills-category reveal">
+        <div class="cat-header"><span class="cat-icon">03</span><h3 class="cat-title">Machine Learning &amp; AI</h3><div class="cat-line"></div></div>
+        <div class="skill-list">
+          <span class="skill-item">Machine Learning Fundamentals</span>
+          <span class="skill-item">Deep Learning Basics</span>
+          <span class="skill-item">Data Preprocessing</span>
+          <span class="skill-item">Model Training & Evaluation</span>
+        </div>
+      </div>
+
+      <div class="skills-category reveal">
+        <div class="cat-header"><span class="cat-icon">04</span><h3 class="cat-title">Libraries &amp; Tools</h3><div class="cat-line"></div></div>
+        <div class="skill-list">
+          <span class="skill-item">NumPy</span>
+          <span class="skill-item">Pandas</span>
+          <span class="skill-item">Jupyter Notebook</span>
+          <span class="skill-item">Git & GitHub</span>
+          <span class="skill-item">VS Code</span>
+          <span class="skill-item">Canva</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="tools-section">
+    <div class="container">
+      <div class="sec-header reveal">
+        <span class="sec-eyebrow">daily tools</span>
+        <h2>Tools I <em>Use Daily</em></h2>
+        <div class="sec-divider"></div>
+      </div>
+      <div class="tools-grid reveal">
+        <div class="tool-chip">VS Code</div><div class="tool-chip">Git / GitHub</div>
+        <div class="tool-chip">Jupyter Notebook</div><div class="tool-chip">NumPy</div>
+        <div class="tool-chip">Pandas</div><div class="tool-chip">Claude</div>
+        <div class="tool-chip">Cursor</div><div class="tool-chip">Canva</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="learning-section">
+    <div class="container">
+      <div class="sec-header reveal">
+        <span class="sec-eyebrow">what's next</span>
+        <h2>Currently <em>Learning</em></h2>
+        <div class="sec-divider"></div>
+      </div>
+      <div class="learning-grid">
+        <div class="learn-card reveal">
+          <div class="learn-icon">AI</div>
+          <h4>Deep Learning</h4>
+          <p>Strengthening the basics of neural networks, computer vision workflows, and model evaluation through project-based learning.</p>
+          <div class="progress-ring">Beginner to intermediate</div>
+        </div>
+        <div class="learn-card reveal">
+          <div class="learn-icon">ML</div>
+          <h4>ML Engineering</h4>
+          <p>Practicing data preprocessing, model training, validation, and evaluation with Python, NumPy, Pandas, and notebooks.</p>
+          <div class="progress-ring">Intermediate</div>
+        </div>
+        <div class="learn-card reveal">
+          <div class="learn-icon">WEB</div>
+          <h4>React & Web Apps</h4>
+          <p>Improving component-based frontend development and building cleaner, responsive web experiences.</p>
+          <div class="progress-ring">Developing</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <p>Built by <span>Deeksha Verma</span> · <span>2026</span></p>
+      <div class="footer-links"><a href="about.html">About</a><a href="work.html">Work</a><a href="contact.html">Contact</a><a href="https://github.com/DeekshaVerma1103" target="_blank">GitHub</a></div>
+      <p><span>● Online</span> — All systems operational</p>
+    </div>
+  </footer>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>

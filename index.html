@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Deeksha Verma - IT Student & ML Enthusiast</title>
+<meta name="description" content="Portfolio of Deeksha Verma, an Information Technology student focused on Python, machine learning, AI, and web technologies."/>
+<link rel="stylesheet" href="css/style.css"/>
+<style>
+#hero{min-height:100vh;display:flex;align-items:center;padding:5rem 0 3rem;}
+.hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;}
+.hero-inner>*{min-width:0;}
+.hero-label{font-family:var(--font-mono);font-size:0.75rem;color:var(--green);letter-spacing:0.15em;text-transform:uppercase;margin-bottom:1.25rem;display:flex;align-items:center;gap:0.5rem;}
+.hero-label::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 10px var(--green);animation:pulse 2s ease-in-out infinite;}
+@keyframes pulse{0%,100%{transform:scale(1);opacity:1;}50%{transform:scale(1.3);opacity:0.7;}}
+h1{font-family:var(--font-display);font-size:clamp(2.4rem,5vw,3.8rem);font-weight:700;line-height:1.05;letter-spacing:-0.03em;margin-bottom:0.5rem;}
+.hero-type-line{display:flex;align-items:center;gap:0.5rem;margin-bottom:1.2rem;}
+.hero-type-label{font-family:var(--font-mono);font-size:clamp(1rem,2vw,1.3rem);color:var(--cyan);}
+.type-cursor{display:inline-block;width:3px;height:1.2em;background:var(--cyan);animation:blink 1s step-end infinite;margin-left:2px;vertical-align:middle;}
+.hero-sub{font-size:1rem;color:var(--muted);max-width:440px;margin-bottom:2rem;line-height:1.75;}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap;}
+.hero-chips{display:flex;gap:0.5rem;margin-top:1.5rem;flex-wrap:wrap;}
+.chip{font-family:var(--font-mono);font-size:0.68rem;padding:0.3rem 0.75rem;border-radius:999px;border:1px solid var(--border2);color:var(--muted);}
+
+#about{padding:6rem 0;background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.about-grid{max-width:820px;margin:0 auto;}
+.about-text h3{font-family:var(--font-display);font-size:1.45rem;font-weight:600;margin-bottom:1rem;letter-spacing:-0.02em;}
+.about-text p{color:var(--muted);margin-bottom:1rem;line-height:1.8;font-size:0.95rem;}
+.stat-row{display:flex;gap:2.5rem;margin-top:2rem;flex-wrap:wrap;}
+
+#skills-preview{padding:5rem 0;}
+.skills-teaser{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:1rem;margin-bottom:2.5rem;}
+.skill-pill{padding:1rem;background:var(--card-bg);border:1px solid var(--border);border-radius:var(--radius2);text-align:center;font-family:var(--font-mono);font-size:0.72rem;color:var(--muted);transition:border-color var(--transition),color var(--transition),transform var(--transition),box-shadow var(--transition);cursor:default;}
+.skill-pill:hover{border-color:var(--cyan);color:var(--cyan);transform:translateY(-4px);box-shadow:0 8px 24px var(--cyan-dim);}
+.skill-pill .s-icon{height:30px;margin-bottom:0.5rem;display:flex;align-items:center;justify-content:center;}
+.skill-pill .s-icon img{width:28px;height:28px;object-fit:contain;display:block;}
+
+#featured{padding:5rem 0;background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.featured-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1.5rem;}
+.proj-card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius2);overflow:hidden;transition:border-color var(--transition),transform var(--transition),box-shadow var(--transition);display:flex;flex-direction:column;}
+.proj-card:hover{transform:translateY(-5px);border-color:var(--lav);box-shadow:0 12px 40px var(--lav-dim);}
+.proj-thumb{height:175px;display:flex;align-items:center;justify-content:center;font-size:3rem;border-bottom:1px solid var(--border);position:relative;overflow:hidden;}
+.proj-thumb::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,transparent 60%,rgba(0,0,0,0.4));pointer-events:none;}
+.t1{background:linear-gradient(135deg,#0D1F2D,#1A2F4A);}
+.t2{background:linear-gradient(135deg,#1A0D2E,#2E1A4A);}
+.t3{background:linear-gradient(135deg,#0D2E1A,#1A4A2E);}
+.t4{background:linear-gradient(135deg,#2E1A0D,#4A2E1A);}
+.proj-body{padding:1.5rem;flex:1;display:flex;flex-direction:column;}
+.proj-year{font-family:var(--font-mono);font-size:0.68rem;color:var(--muted);margin-bottom:0.5rem;display:flex;align-items:center;gap:0.5rem;}
+.badge{font-size:0.6rem;padding:0.15rem 0.5rem;border-radius:20px;letter-spacing:0.1em;font-family:var(--font-mono);}
+.badge-new{background:rgba(0,212,255,0.15);color:var(--cyan);border:1px solid rgba(0,212,255,0.3);}
+.proj-body h3{font-family:var(--font-display);font-size:1rem;font-weight:600;margin-bottom:0.5rem;letter-spacing:-0.01em;}
+.proj-body p{font-size:0.85rem;color:var(--muted);line-height:1.65;flex:1;}
+.proj-footer{display:flex;align-items:center;justify-content:space-between;margin-top:1.25rem;padding-top:1rem;border-top:1px solid var(--border);}
+.proj-tags{display:flex;gap:0.35rem;flex-wrap:wrap;}
+.proj-link{font-family:var(--font-mono);font-size:0.7rem;color:var(--cyan);text-decoration:none;white-space:nowrap;}
+.proj-link:hover{text-decoration:underline;}
+
+.cta-band{padding:5rem 0;text-align:center;}
+.cta-band h2{margin-bottom:1rem;}
+.cta-band p{color:var(--muted);margin-bottom:2rem;font-size:1rem;}
+.cta-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;}
+
+@media(max-width:820px){#hero .container{width:100%;max-width:100%;overflow:hidden;}.hero-inner{grid-template-columns:minmax(0,1fr);width:100%;max-width:100%;overflow:hidden;}.terminal{width:100%;max-width:100%;min-width:0;}.terminal-body{font-size:0.72rem;overflow-wrap:anywhere;word-break:break-word;}.hero-sub{max-width:100%;}.hero-chips{max-width:100%;overflow:hidden;}}
+@media(max-width:540px){#hero .container{padding-left:2rem;padding-right:1rem;}.hero-inner>div,.hero-chips,.terminal,.hero-btns{width:100%;max-width:326px;}.hero-sub{width:100%;max-width:310px;font-size:0.92rem;}.terminal-body{font-size:0.66rem;padding:1rem;}.hero-btns .btn-primary,.hero-btns .btn-ghost{flex:1;justify-content:center;padding-left:0.75rem;padding-right:0.75rem;}.chip{font-size:0.62rem;}}
+</style>
+</head>
+<body>
+<div class="page-transition"></div>
+<canvas id="particles-canvas"></canvas>
+<div class="grid-overlay"></div>
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+
+<nav>
+  <a href="index.html" class="nav-logo">Deeksha <span>Verma</span></a>
+  <ul class="nav-center">
+    <li><a href="index.html">home</a></li>
+    <li><a href="about.html">about</a></li>
+    <li><a href="skills.html">skills</a></li>
+    <li><a href="work.html">work</a></li>
+    <li><a href="contact.html">contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <span class="theme-icon">🌙</span>
+    <button class="theme-toggle" aria-label="Toggle theme"><div class="toggle-thumb"></div></button>
+    <a href="contact.html" class="nav-hire magnetic">contact me</a>
+  </div>
+  <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu">
+  <a href="index.html">home</a><a href="about.html">about</a>
+  <a href="skills.html">skills</a><a href="work.html">work</a><a href="contact.html">contact</a>
+</div>
+
+<div class="page-content">
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="container">
+      <div class="hero-inner">
+        <div>
+          <div class="hero-label">open to internships, roles, and freelance</div>
+          <h1>Hi, I'm<br/><span style="color:var(--cyan)">Deeksha Verma</span></h1>
+          <div class="hero-type-line">
+            <span class="hero-type-label"><span id="typewriter">Information Technology Student</span><span class="type-cursor"></span></span>
+          </div>
+          <p class="hero-sub">I am an Information Technology student building a strong foundation in programming, machine learning, AI fundamentals, and web technologies.</p>
+          <div class="hero-btns">
+            <a href="work.html" class="btn-primary magnetic">View Projects</a>
+            <a href="contact.html" class="btn-ghost magnetic">Get In Touch</a>
+          </div>
+          <div class="hero-chips">
+            <span class="chip">Python</span><span class="chip">Machine Learning</span><span class="chip">React</span>
+            <span class="chip">JavaScript</span><span class="chip">C++</span><span class="chip">Pandas</span>
+          </div>
+        </div>
+        <div class="reveal-right">
+          <div class="terminal">
+            <div class="terminal-bar">
+              <div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div>
+              <span class="terminal-title">~/portfolio — zsh</span>
+            </div>
+            <div class="terminal-body">
+              <div><span class="t-prompt">❯</span> <span class="t-cmd">cat about.json</span></div>
+              <div class="t-out">{</div>
+              <div>&nbsp;&nbsp;<span class="t-val">"name"</span>: <span class="t-str">"Deeksha Verma"</span>,</div>
+              <div>&nbsp;&nbsp;<span class="t-val">"role"</span>: <span class="t-str">"IT Student"</span>,</div>
+              <div>&nbsp;&nbsp;<span class="t-val">"degree"</span>: <span class="t-str">"B.Tech Information Technology"</span>,</div>
+              <div>&nbsp;&nbsp;<span class="t-val">"location"</span>: <span class="t-str">"New Delhi, India"</span>,</div>
+              <div>&nbsp;&nbsp;<span class="t-val">"focus"</span>: [<span class="t-str">"Python"</span>,<span class="t-str">"ML"</span>,<span class="t-str">"Web"</span>],</div>
+              <div>&nbsp;&nbsp;<span class="t-val">"open_to"</span>: [<span class="t-str">"internships"</span>,<span class="t-str">"full-time"</span>,<span class="t-str">"freelance"</span>]</div>
+              <div class="t-out">}</div>
+              <br/>
+              <div><span class="t-prompt">❯</span> <span class="t-cmd">npm run start</span></div>
+              <div class="t-out">✓ Portfolio running on port 3000</div>
+              <div><span class="t-prompt">❯</span> <span class="cursor"></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SNIPPET -->
+  <section id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="reveal">
+          <span class="sec-eyebrow">who i am</span>
+          <h2 style="text-align:left;margin-bottom:1rem;">Learning, building, and applying technology to real problems.</h2>
+          <p style="color:var(--muted);line-height:1.8;margin-bottom:1rem;font-size:0.95rem;">I am pursuing B.Tech in Information Technology at Manipal University Jaipur, with a growing focus on machine learning, AI, and practical web development.</p>
+          <p style="color:var(--muted);line-height:1.8;margin-bottom:1.5rem;font-size:0.95rem;">Through coursework, self-learning, hackathons, and an internship in Python and Machine Learning at IGDTUW, I am building the skills to turn technical concepts into useful projects.</p>
+          <a href="about.html" class="btn-ghost">More About Me</a>
+          <div class="stat-row" style="margin-top:2.5rem;">
+            <div class="stat"><div class="stat-num counter" data-target="2027">0</div><div class="stat-label">Graduation</div></div>
+            <div class="stat"><div class="stat-num counter" data-target="2" data-suffix="+">0+</div><div class="stat-label">Internships</div></div>
+            <div class="stat"><div class="stat-num counter" data-target="4" data-suffix="+">0+</div><div class="stat-label">Certifications</div></div>
+            <div class="stat"><div class="stat-num counter" data-target="2" data-suffix="+">0+</div><div class="stat-label">Hackathons</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS TEASER -->
+  <section id="skills-preview">
+    <div class="container">
+      <div class="sec-header reveal">
+        <span class="sec-eyebrow">tech stack</span>
+        <h2>What I <em>Work With</em></h2>
+        <div class="sec-divider"></div>
+      </div>
+      <div class="skills-teaser">
+        <div class="skill-pill reveal"><span class="s-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt=""/></span>Python</div>
+        <div class="skill-pill reveal"><span class="s-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt=""/></span>C</div>
+        <div class="skill-pill reveal"><span class="s-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt=""/></span>C++</div>
+        <div class="skill-pill reveal"><span class="s-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt=""/></span>JavaScript</div>
+        <div class="skill-pill reveal"><span class="s-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt=""/></span>HTML5</div>
+        <div class="skill-pill reveal"><span class="s-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt=""/></span>CSS3</div>
+        <div class="skill-pill reveal"><span class="s-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt=""/></span>Machine Learning</div>
+        <div class="skill-pill reveal"><span class="s-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt=""/></span>NumPy</div>
+        <div class="skill-pill reveal"><span class="s-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt=""/></span>Pandas</div>
+        <div class="skill-pill reveal"><span class="s-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt=""/></span>GitHub</div>
+      </div>
+      <div style="text-align:center;"><a href="skills.html" class="btn-ghost">See Full Skill Set</a></div>
+    </div>
+  </section>
+
+  <!-- FEATURED WORK -->
+  <section id="featured">
+    <div class="container">
+      <div class="sec-header reveal">
+        <span class="sec-eyebrow">recent work</span>
+        <h2>Featured <em>Projects</em></h2>
+        <div class="sec-divider"></div>
+      </div>
+      <div class="featured-grid">
+        <div class="proj-card reveal">
+          <div class="proj-thumb t1">🚀</div>
+          <div class="proj-body">
+            <div class="proj-year">2024 <span class="badge badge-new">AI/ML</span></div>
+            <h3>AI Deepfake Detection System</h3>
+            <p>Built a deepfake detection system using Vision Transformer architecture, Python workflows, data preprocessing, model training, and evaluation.</p>
+            <div class="proj-footer">
+              <div class="proj-tags"><span class="tag tag-cyan">Python</span><span class="tag tag-lav">ViT</span></div>
+              <a href="work.html" class="proj-link">View</a>
+            </div>
+          </div>
+        </div>
+        <div class="proj-card reveal">
+          <div class="proj-thumb t2">🔐</div>
+          <div class="proj-body">
+            <div class="proj-year">2024 <span class="badge badge-new">INTERNSHIP</span></div>
+            <h3>Python & Machine Learning Internship</h3>
+            <p>Completed practical ML work at IGDTUW, applying data handling, model training, and evaluation on real-world datasets.</p>
+            <div class="proj-footer">
+              <div class="proj-tags"><span class="tag tag-cyan">Python</span><span class="tag tag-lav">ML</span></div>
+              <a href="work.html" class="proj-link">View</a>
+            </div>
+          </div>
+        </div>
+        <div class="proj-card reveal">
+          <div class="proj-thumb t3">🌿</div>
+          <div class="proj-body">
+            <div class="proj-year">2026 <span class="badge badge-new">LIVE</span></div>
+            <h3>Trimbaks InfoTech Website</h3>
+            <p>Built and deployed the official company website for Trimbaks InfoTech, creating a responsive web presence for the business.</p>
+            <div class="proj-footer">
+              <div class="proj-tags"><span class="tag tag-cyan">HTML</span><span class="tag tag-lav">CSS</span><span class="tag">JavaScript</span></div>
+              <a href="https://trimbakinfotech.com/" class="proj-link" target="_blank">Live Site</a>
+            </div>
+          </div>
+        </div>
+        <div class="proj-card reveal">
+          <div class="proj-thumb t4">📦</div>
+          <div class="proj-body">
+            <div class="proj-year">2024</div>
+            <h3>Portfolio Website</h3>
+            <p>Responsive personal portfolio built with HTML, CSS, and JavaScript to present projects, skills, education, and contact details.</p>
+            <div class="proj-footer">
+              <div class="proj-tags"><span class="tag tag-cyan">HTML</span><span class="tag tag-lav">CSS</span></div>
+              <a href="work.html" class="proj-link">View</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:2.5rem;"><a href="work.html" class="btn-primary magnetic">View All Projects</a></div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-band">
+    <div class="container reveal">
+      <h2>Looking for a developer or collaborator?</h2>
+      <p>I am open to internships, full-time roles, freelance projects, hackathons, and learning-focused collaborations.</p>
+      <div class="cta-btns">
+        <a href="contact.html" class="btn-primary magnetic">Contact Me</a>
+        <a href="work.html" class="btn-ghost">Browse Projects</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <p>Built by <span>Deeksha Verma</span> · <span>2026</span></p>
+      <div class="footer-links">
+        <a href="about.html">About</a><a href="work.html">Work</a>
+        <a href="contact.html">Contact</a><a href="https://github.com/DeekshaVerma1103" target="_blank">GitHub</a>
+      </div>
+      <p><span>● Online</span> — All systems operational</p>
+    </div>
+  </footer>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

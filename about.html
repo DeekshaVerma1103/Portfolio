@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>About - Deeksha Verma</title>
+<link rel="stylesheet" href="css/style.css"/>
+<style>
+.page-hero{padding:6rem 0 4rem;text-align:center;}
+.page-hero h1{font-family:var(--font-display);font-size:clamp(2.2rem,4vw,3.2rem);font-weight:700;letter-spacing:-0.03em;margin-bottom:1rem;}
+.page-hero p{color:var(--muted);font-size:1rem;max-width:500px;margin:0 auto;}
+.about-full{padding:4rem 0 6rem;}
+.about-full-grid{display:block;max-width:860px;margin:0 auto;}
+.social-links{display:flex;flex-wrap:wrap;gap:0.75rem;margin-bottom:3rem;}
+.social-link{font-family:var(--font-mono);font-size:0.75rem;color:var(--muted);text-decoration:none;padding:0.6rem 1rem;border:1px solid var(--border);border-radius:var(--radius);display:flex;align-items:center;gap:0.5rem;transition:border-color var(--transition),color var(--transition),background var(--transition);}
+.social-link:hover{border-color:var(--cyan);color:var(--cyan);background:var(--cyan-dim);}
+.main-content h2{font-family:var(--font-display);font-size:1.6rem;font-weight:700;letter-spacing:-0.02em;margin-bottom:1rem;}
+.main-content h2 em{font-style:normal;color:var(--lav);}
+.main-content p{color:var(--muted);margin-bottom:1rem;line-height:1.8;font-size:0.95rem;}
+.main-content section{margin-bottom:3.5rem;}
+.values-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.5rem;}
+.value-card{background:var(--card-bg);border:1px solid var(--border);border-radius:var(--radius2);padding:1.25rem;transition:border-color var(--transition);}
+.value-card:hover{border-color:var(--lav);}
+.value-icon{font-size:1.5rem;margin-bottom:0.5rem;}
+.value-card h4{font-family:var(--font-display);font-size:0.9rem;font-weight:600;margin-bottom:0.3rem;}
+.value-card p{font-size:0.82rem;color:var(--muted);line-height:1.6;margin:0;}
+.stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-top:2rem;}
+.stat-card{background:var(--card-bg);border:1px solid var(--border);border-radius:var(--radius2);padding:1.5rem;text-align:center;transition:border-color var(--transition),transform var(--transition);}
+.stat-card:hover{border-color:var(--cyan);transform:translateY(-3px);}
+@media(max-width:860px){.values-grid{grid-template-columns:1fr;}.stats-row{grid-template-columns:repeat(2,1fr);}.social-links{flex-direction:column;}}
+</style>
+</head>
+<body>
+<div class="page-transition"></div>
+<canvas id="particles-canvas"></canvas>
+<div class="grid-overlay"></div>
+<div class="orb orb-1"></div><div class="orb orb-2"></div>
+
+<nav>
+  <a href="index.html" class="nav-logo">Deeksha <span>Verma</span></a>
+  <ul class="nav-center">
+    <li><a href="index.html">home</a></li><li><a href="about.html">about</a></li>
+    <li><a href="skills.html">skills</a></li><li><a href="work.html">work</a></li><li><a href="contact.html">contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <span class="theme-icon">🌙</span>
+    <button class="theme-toggle" aria-label="Toggle theme"><div class="toggle-thumb"></div></button>
+    <a href="contact.html" class="nav-hire magnetic">contact me</a>
+  </div>
+  <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu">
+  <a href="index.html">home</a><a href="about.html">about</a>
+  <a href="skills.html">skills</a><a href="work.html">work</a><a href="contact.html">contact</a>
+</div>
+
+<div class="page-content">
+  <div class="page-hero reveal">
+    <div class="container">
+      <span class="sec-eyebrow">get to know me</span>
+      <h1>About <span style="color:var(--cyan)">Me</span></h1>
+      <p>Information Technology student focused on programming, machine learning, AI fundamentals, and web technologies.</p>
+    </div>
+  </div>
+
+  <section class="about-full">
+    <div class="container">
+      <div class="about-full-grid">
+        <div class="reveal">
+          <div class="social-links">
+            <a href="https://github.com/DeekshaVerma1103" class="social-link" target="_blank">GitHub - DeekshaVerma1103</a>
+            <a href="https://www.linkedin.com/in/deekshaverma1103" class="social-link" target="_blank">LinkedIn - deekshaverma1103</a>
+            <a href="mailto:vermadeeksha1103@gmail.com" class="social-link">Email - vermadeeksha1103@gmail.com</a>
+            <a href="resume.pdf" class="social-link" target="_blank">Download Resume</a>
+          </div>
+        </div>
+
+        <div class="main-content reveal">
+          <section>
+            <h2>Hey, I'm <em>Deeksha</em></h2>
+            <p>I am an Information Technology student at Manipal University Jaipur, pursuing B.Tech from August 2023 to July 2027. My current focus is programming, machine learning fundamentals, AI basics, and web technologies.</p>
+            <p>I am continuously developing my technical and analytical skills through academic coursework, self-learning, internships, certifications, and hackathon participation.</p>
+            <p>I am open to internships, full-time roles, and freelance projects where I can apply theoretical knowledge in practical, real-world environments and keep improving through hands-on work.</p>
+          </section>
+
+          <section>
+            <h2>My <em>Values</em></h2>
+            <div class="values-grid">
+              <div class="value-card reveal">
+                <div class="value-icon">🎯</div>
+                <h4>Strong fundamentals</h4>
+                <p>I focus on building a clear base in programming, data handling, and core computer science concepts.</p>
+              </div>
+              <div class="value-card reveal">
+                <div class="value-icon">🔁</div>
+                <h4>Hands-on learning</h4>
+                <p>I learn best by turning concepts into practical projects, experiments, and working prototypes.</p>
+              </div>
+              <div class="value-card reveal">
+                <div class="value-icon">🤝</div>
+                <h4>Analytical thinking</h4>
+                <p>I enjoy breaking down problem statements, understanding data, and improving solutions step by step.</p>
+              </div>
+              <div class="value-card reveal">
+                <div class="value-icon">📚</div>
+                <h4>Continuous growth</h4>
+                <p>I keep learning through coursework, certifications, hackathons, and self-driven technical practice.</p>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h2>Experience & <em>Education</em></h2>
+            <div class="timeline">
+              <div class="tl-item reveal">
+                <div class="tl-year">2023-2027</div>
+                <div class="tl-dot"></div>
+                <div class="tl-content">
+                  <h4>B.Tech in Information Technology</h4>
+                  <div class="tl-company">// Manipal University Jaipur</div>
+                  <p class="tl-desc">Pursuing undergraduate studies in Information Technology with coursework and self-learning across programming, web technologies, machine learning, and AI fundamentals.</p>
+                </div>
+              </div>
+              <div class="tl-item reveal">
+                <div class="tl-year">2026</div>
+                <div class="tl-dot"></div>
+                <div class="tl-content">
+                  <h4>Web Development Intern</h4>
+                  <div class="tl-company">// Trimbaks InfoTech</div>
+                  <p class="tl-desc">Built the company's official website and deployed it live at <a href="https://trimbakinfotech.com/" target="_blank" style="color:var(--cyan);">trimbakinfotech.com</a>, creating a responsive online presence for the business.</p>
+                </div>
+              </div>
+              <div class="tl-item reveal">
+                <div class="tl-year">Jun-Jul 2024</div>
+                <div class="tl-dot"></div>
+                <div class="tl-content">
+                  <h4>Python & Machine Learning Intern</h4>
+                  <div class="tl-company">// IGDTUW, Delhi</div>
+                  <p class="tl-desc">Completed an internship focused on Python programming and machine learning fundamentals. Applied data handling, model training, and evaluation workflows on practical datasets.</p>
+                </div>
+              </div>
+              <div class="tl-item reveal">
+                <div class="tl-year">2024</div>
+                <div class="tl-dot"></div>
+                <div class="tl-content">
+                  <h4>Hackathon Participation</h4>
+                  <div class="tl-company">// HackX 2.0 and Smart India Hackathon 2024</div>
+                  <p class="tl-desc">Participated in hackathon environments that strengthened teamwork, ideation, rapid problem-solving, and presenting technical solutions under time constraints.</p>
+                </div>
+              </div>
+              <div class="tl-item reveal">
+                <div class="tl-year">2024</div>
+                <div class="tl-dot"></div>
+                <div class="tl-content">
+                  <h4>Certifications</h4>
+                  <div class="tl-company">// IBM, Tata Group Forage, IGDTUW</div>
+                  <p class="tl-desc">Completed certifications including Machine Learning with Python authorized by IBM, Cybersecurity Analyst Job Simulation by Tata Group on Forage, and Python & Machine Learning internship completion.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h2>By the <em>Numbers</em></h2>
+            <div class="stats-row">
+              <div class="stat-card reveal"><div class="stat-num counter" data-target="2027">0</div><div class="stat-label">Expected graduation</div></div>
+              <div class="stat-card reveal"><div class="stat-num counter" data-target="2" data-suffix="+">0</div><div class="stat-label">Internships completed</div></div>
+              <div class="stat-card reveal"><div class="stat-num counter" data-target="4" data-suffix="+">0</div><div class="stat-label">Certifications</div></div>
+              <div class="stat-card reveal"><div class="stat-num counter" data-target="2" data-suffix="+">0</div><div class="stat-label">Hackathons</div></div>
+            </div>
+          </section>
+
+          <section>
+            <h2>Current <em>Focus</em></h2>
+            <p>Right now I am focused on becoming stronger at the point where software development, machine learning, and real-world problem solving meet. I am practicing Python-based ML workflows end to end, from cleaning datasets and understanding features to training models, evaluating results, and explaining what the output actually means.</p>
+            <p>I am also building more complete web projects instead of only small pages. My goal is to create websites that feel polished, responsive, and useful, with clean structure, readable code, and thoughtful user experience.</p>
+            <p>Alongside coursework, I am exploring deep learning basics, computer vision ideas, and practical AI use cases. I want my next projects to combine strong frontend presentation with meaningful backend or ML logic, so they show both design sense and technical depth.</p>
+          </section>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <p>Built by <span>Deeksha Verma</span> · <span>2026</span></p>
+      <div class="footer-links"><a href="about.html">About</a><a href="work.html">Work</a><a href="contact.html">Contact</a><a href="https://github.com/DeekshaVerma1103" target="_blank">GitHub</a></div>
+      <p><span>● Online</span> — All systems operational</p>
+    </div>
+  </footer>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>
